@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lighting Calcy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="java.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Lighting Calcy</h1>
+    <div>
+      <label for="length">Length (ft):</label>
+      <input type="number" id="length" placeholder="Enter length">
+    </div>
+    <div>
+      <label for="width">Width (ft):</label>
+      <input type="number" id="width" placeholder="Enter width">
+    </div>
+    <div>
+      <label for="height">Height (ft):</label>
+      <input type="number" id="height" placeholder="Enter height">
+    </div>
+    <div>
+      <label for="lighting">Select Lighting Type:</label>
+      <select id="lighting">
+        <option value="decorative">Decorative</option>
+        <option value="dim">Dim</option>
+        <option value="ambient">Ambient</option>
+        <option value="accent">Accent</option>
+      </select>
+    </div>
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"></div>
+
+    <div id="feedback">
+      <h2>Client Feedback and Ratings</h2>
+      <div id="feedback-form">
+        <h3>Leave Your Feedback</h3>
+        <textarea id="feedback-text" rows="4" cols="30" placeholder="Write your feedback here"></textarea>
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5">
+        <button onclick="submitFeedback()">Submit</button>
+      </div>
+      <div id="feedback-list">
+        <h3>Feedback List</h3>
+        <ul id="feedback-items"></ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
